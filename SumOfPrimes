@@ -1,0 +1,26 @@
+import java.io.*;
+
+public class Main {
+    public static void main (String[] args) {
+        int sum=0;
+        int count=1;
+        int numbers =2;
+        while(count<=1000){
+            if (isPrime(numbers)){
+                sum+=numbers;
+                count++;
+            }
+            numbers++;
+        }
+        System.out.println(sum);
+        
+    }
+    public static boolean isPrime(int number){
+        for (int i =2;i<number;i++){
+            if (number%i ==0){
+                return false;
+            }
+        }
+        return true;
+    }
+}
